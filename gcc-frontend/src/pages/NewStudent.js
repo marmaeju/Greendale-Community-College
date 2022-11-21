@@ -9,7 +9,7 @@ const NewStudent = () => {
     firstName:'',
     lastName:'',
     email:'',
-    img:'',
+    image:'',
     gpa:null,
   }
 
@@ -42,9 +42,9 @@ setFormState({...formState,[e.target.id]:e.target.value})
     </label>
     <input className="input" type="text" id="email" value={formState.email} onChange={handleChange} required/>
 
-    <label className="label" htmlFor="img">Student Photo:
+    <label className="label" htmlFor="image">Student Photo:
     </label>
-    <input className="input" type="text" id="img" value={formState.img} onChange={handleChange} required/>
+    <input className="input" type="text" id="image" value={formState.image} onChange={handleChange} required/>
 
         <button className="zoom add-student-button" type="submit">
           Add Student
