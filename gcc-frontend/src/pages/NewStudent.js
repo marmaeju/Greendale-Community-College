@@ -21,14 +21,14 @@ setFormState({...formState,[e.target.id]:e.target.value})
 
   const handleSubmit= async (e)=>{
     e.preventDefault()
-    await axios.post('localhost:3001/student',formState)
+    await axios.post('http://localhost:3001/student',formState)
     setFormState(initialFormState)
-    navigate(`localhost:3001/student`)
+    navigate(`/students`)
   }
 
   return (
   
-  <div className="form-container">Browse All Students:
+  <div className="form-container">
   <form onSubmit={handleSubmit}>
     <label className="label" htmlFor="firstName">First Name:
     </label>

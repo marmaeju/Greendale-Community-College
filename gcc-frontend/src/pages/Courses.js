@@ -21,10 +21,14 @@ const Courses = () => {
     <div className="courses-container">
       <h1>Here at Greendale, we offer a wide variety of courses!</h1>
       <h2>Courses:</h2>
+
       <SearchBar />
       <div>
+
+      <div className="courses">
+
         {courses.map((course) => (
-          <div className="courses" key={course.id}>
+          <div key={course.id}>
             <h4 className="course-name">{course.courseName}</h4>
           </div>
         ))}
