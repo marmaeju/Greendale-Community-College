@@ -14,12 +14,12 @@ const SearchBar = (props) => {
 
   return (
     <>
-      Search Students:
+      Search Courses:
       <input onChange={onChange} type="search" />
       <button>Submit</button>
       <br />
       <br />
-      Search Courses:
+      Search Students:
       <input type="search" />
       <button>Submit</button>
       <h1>Students:</h1>
