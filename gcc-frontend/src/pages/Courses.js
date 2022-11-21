@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
+import SearchBar from '../components/SearchBar'
 
 const Courses = () => {
   let navigate = useNavigate()
@@ -20,6 +21,7 @@ const Courses = () => {
     <div className="courses-container">
       <h1>Here at Greendale, we offer a wide variety of courses!</h1>
       <h2>Courses:</h2>
+      <SearchBar />
       <div>
         {courses.map((course) => (
           <div className="courses" key={course.id}>
