@@ -18,7 +18,7 @@ const NewCourse = () => {
     })
   }
 
-  const handleSubmit = async () => {
+  const handleSubmit = async (event) => {
     event.preventDefault()
     const newCourse = {
       ...formState
