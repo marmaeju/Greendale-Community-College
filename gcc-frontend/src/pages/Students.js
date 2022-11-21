@@ -32,7 +32,7 @@ const Students = () => {
       <div>Last Name:{student.lastName}</div>
       <div>Email:{student.email}</div>
       <div>{student.firstName}</div>
-      <div onClick={()=>selectStudent(record)}>
+      <div onClick={()=>selectStudent(student)}>
         <img src={student.image}></img>
       </div>
 
