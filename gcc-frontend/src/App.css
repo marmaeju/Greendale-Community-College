@@ -20,12 +20,17 @@ code {
 }
 
 .courses {
-
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
 }
 
 .course-name {
   height: 50px;
-  width: 110%;
+  padding-left: 2px;
+  padding-right: 2px;
   border: 1px solid black;
   border-radius: 10px;
+  display: flex;
+  align-items: center;
 }
