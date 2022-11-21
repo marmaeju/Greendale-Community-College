@@ -28,7 +28,7 @@ setFormState({...formState,[e.target.id]:e.target.value})
 
   return (
   
-  <div className="form-container">Enroll New Student
+  <div className="form-container">Browse All Students:
   <form onSubmit={handleSubmit}>
     <label className="label" htmlFor="firstName">First Name:
     </label>

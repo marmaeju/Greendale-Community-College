@@ -9,7 +9,7 @@ const Students = () => {
   const [studentList,setStudentList]=useState(null)
   const [selectedStudent,setSelectedStudent]=useState([])
 
-  getAllStudents=async ()=>{
+  const getAllStudents=async ()=>{
     const res=await axios.get("localhost:3001/student")
     console.log(res.data)
     setStudentList(res.data)
@@ -17,7 +17,7 @@ const Students = () => {
 
   const selectStudent=(selected)=>{
     setSelectedStudent(selected)
-    navigate(`/${selected.id}`)
+    navigate(`students/${selected.id}`)
   }
 
   useEffect(()=>{
@@ -25,7 +25,7 @@ const Students = () => {
   },[])
 
   return( 
-  <div className="students-container">Browse All Students
+  <div className="students-container">
    {studentList?.map((student)=>
    <div className="student">
       <div>First Name:{student.firstName}</div>
@@ -35,6 +35,8 @@ const Students = () => {
       <div onClick={()=>selectStudent(record)}>
         <img src={student.image}></img>
       </div>
+
+      <div></div>
 
 
 
