@@ -18,7 +18,11 @@ const Students = () => {
 
   const selectStudent = (selected) => {
     setSelectedStudent(selected)
-    navigate(`students/${selected.id}`)
+    navigate(`${selected.id}`)
+  }
+
+  const addStudent=()=>{
+    navigate(`/newstudents`)
   }
 
   const getGPA = async () => {
@@ -45,13 +49,20 @@ const Students = () => {
 
   return (
     <div className="students-container">
+
       <h1>
         <em>Browse Greendale Students</em>
       </h1>
+   
       <Search getAllStudents={getAllStudents} />
+ 
+      <h2><em>Enrolling a New Student? They're Already Accepted! Click below to Add:</em></h2>
+        <button onClick={addStudent}>Create New Student<br></br></button>
+        <h2>Browse Current Students:</h2>
+   
       <div className="students-map">
         {studentList?.map((student) => (
-          <div className="student" key={student.id}>
+          <div className="student" key={student.id}  onClick={() => selectStudent(student)} >
             <h3>
               {student.lastName},{student.firstName}
             </h3>
@@ -59,11 +70,16 @@ const Students = () => {
               <em>{student.email}</em>
             </div>
             <div onClick={() => selectStudent(student)}>
-              <img src={student.image} alt="student image"></img>
+              <img
+                className="student-img"
+                src={student.image}
+                alt="student image"
+              ></img>
             </div>
             <div>GPA: {student.gpa}</div>
           </div>
         ))}
+      
       </div>
     </div>
   )

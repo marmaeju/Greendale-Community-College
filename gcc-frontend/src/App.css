@@ -45,6 +45,11 @@ justify-content: space-around;
   cursor: pointer;
 }
 
+.course-name:hover {
+  background-color:#b3cbde;
+  transition: all 0.3s ease;
+}
+
 .new-course-container {
   display: flex;
 flex-direction: column;
@@ -140,6 +145,7 @@ a:hover,
 
 .add {
   font-family: 'Lora', serif;
+  cursor: pointer;
 }
 
 .search {
@@ -161,8 +167,17 @@ a:hover,
   font-size: 1em;
   transition: all 0.3s ease;
   justify-content: space-evenly;
+  margin: 10px;
 }
 
+.btn:hover {
+
+}
+
+.home-buttons {
+  display: flex;
+  justify-content: center;
+}
 /* .students-map {
   display: flex;
   flex-direction: row;
@@ -197,4 +212,8 @@ a:hover,
 .students-container {
   text-align: center;
   margin-top: 50px;
+
+.student-img {
+  width: 200px;
+  margin: 5px 0;
 }

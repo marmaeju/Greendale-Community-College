@@ -20,6 +20,7 @@ const Home = () => {
       <button className="home-btn" onClick={() => navigate('/courses')}>
         See Courses
       </button>
+
     </div>
   )
 }
