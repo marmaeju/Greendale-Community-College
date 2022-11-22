@@ -26,7 +26,6 @@ const Students = () => {
 
   return (
     <div className="students-container">
-      Search Students:
       <Search getAllStudents={getAllStudents} />
       <h1>
         <em>Browse Greendale Students</em>
