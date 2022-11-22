@@ -42,6 +42,7 @@ justify-content: space-around;
   display: flex;
   align-items: center;
   margin-right: 10px;
+  cursor: pointer;
 }
 
 .new-course-container {
