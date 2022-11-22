@@ -20,8 +20,6 @@ const CourseDetails = () => {
     getRoster()
   }, [])
 
-  let letterGrade = ''
-
   return (
     <div className="main">
       <h1 className="course-title">{className.courseName}</h1>
