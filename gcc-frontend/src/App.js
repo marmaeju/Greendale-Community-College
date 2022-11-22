@@ -7,6 +7,7 @@ import Courses from './pages/Courses'
 import Students from './pages/Students'
 import NewStudents from './pages/NewStudent'
 import NewCourse from './pages/NewCourse'
+import StudentDetails from './pages/StudentDetails'
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/courses" element={<Courses />} />
           <Route path="/newstudents" element={<NewStudents />} />
           <Route path="/newcourse" element={<NewCourse />} />
+          <Route path="/students/:student_id" element={<StudentDetails />} />
         </Routes>
       </main>
     </div>
