@@ -24,6 +24,10 @@ display: flex;
 flex-wrap: wrap;
 justify-content: space-around;
 }
+.new-course {
+  cursor: pointer;
+  text-align: center;
+}
 
 .course-name {
   height: 50px;
@@ -33,11 +37,12 @@ justify-content: space-around;
   border-radius: 10px;
   display: flex;
   align-items: center;
+  margin-right: 10px;
 }
 
 .navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
  font-size: 20px;
   padding: 1em;
