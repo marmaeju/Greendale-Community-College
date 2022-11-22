@@ -45,10 +45,10 @@ const Students = () => {
 
   return (
     <div className="students-container">
-      <Search getAllStudents={getAllStudents} />
       <h1>
         <em>Browse Greendale Students</em>
       </h1>
+      <Search getAllStudents={getAllStudents} />
       <div className="students-map">
         {studentList?.map((student) => (
           <div className="student" key={student.id}>
