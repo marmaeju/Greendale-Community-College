@@ -42,6 +42,12 @@ justify-content: space-around;
   display: flex;
   align-items: center;
   margin-right: 10px;
+  cursor: pointer;
+}
+
+.course-name:hover {
+  background-color:#b3cbde;
+  transition: all 0.3s ease;
 }
 
 .new-course-container {
@@ -115,9 +121,15 @@ a:hover,
   font-family: 'Lora', serif;
 }
 
+.home-image {
+  width: 50%;
+  padding-left: 25%;
+  object-position: center;
+}
 
 .add {
   font-family: 'Lora', serif;
+  cursor: pointer;
 }
 
 .search {
@@ -127,6 +139,29 @@ a:hover,
   cursor: pointer;
 }
 
+
+.btn {
+  background-color: white;
+  padding: 0.5rem 1rem;
+  display: inline-block;
+  border: 2px solid black;
+  /* text-transform: uppercase; */
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: all 0.3s ease;
+  justify-content: space-evenly;
+  margin: 10px;
+}
+
+.btn:hover {
+  background-color: #90c0e6;
+}
+
+.home-buttons {
+  display: flex;
+  justify-content: center;
+}
 /* .students-map {
   display: flex;
   flex-direction: row;
@@ -141,4 +176,10 @@ a:hover,
   border: 1px solid black;
   border-radius: 10px;
   margin: 10px
+
+}
+
+.student-img {
+  width: 200px;
+  margin: 5px 0;
 }

@@ -64,8 +64,12 @@ const Students = () => {
             <div>
               <em>{student.email}</em>
             </div>
-            <div id={student.id}>
-              <img src={student.image} alt="student-image"></img>
+            <div onClick={() => selectStudent(student)}>
+              <img
+                className="student-img"
+                src={student.image}
+                alt="student image"
+              ></img>
             </div>
             <div>GPA: {student.gpa}</div>
           </div>
