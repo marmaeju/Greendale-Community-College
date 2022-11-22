@@ -145,6 +145,16 @@ a:hover,
   font-size: 1em;
   transition: all 0.3s ease;
   justify-content: space-evenly;
+  margin: 10px;
+}
+
+.btn:hover {
+  background-color: #90c0e6;
+}
+
+.home-buttons {
+  display: flex;
+  justify-content: center;
 }
 /* .students-map {
   display: flex;
