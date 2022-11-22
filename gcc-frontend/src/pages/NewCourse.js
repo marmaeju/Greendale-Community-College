@@ -31,19 +31,21 @@ const NewCourse = () => {
   return (
     <div className="new-course-container">
       <h1>Add your Greendale course here!</h1>
-      <form className="course-form" onSubmit={handleSubmit}>
-        <label htmlFor="courseName">Course name:</label>
-        <input
-          className="course-name"
-          id="courseName"
-          value={formState.courseName}
-          type="text"
-          onChange={handleChange}
-        />
-        <button className="submit-course-button" type="submit">
-          Create {formState.courseName}!
-        </button>
-      </form>
+      <div>
+        <form className="course-form" onSubmit={handleSubmit}>
+          <label htmlFor="courseName">Course name:</label>
+          <input
+            className="course-name"
+            id="courseName"
+            value={formState.courseName}
+            type="text"
+            onChange={handleChange}
+          />
+          <button className="submit-course-button" type="submit">
+            Create {formState.courseName}!
+          </button>
+        </form>
+      </div>
     </div>
   )
 }
