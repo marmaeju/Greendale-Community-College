@@ -31,7 +31,7 @@ const Courses = () => {
             </div>
           ))}
         </div>
-        <p onClick={() => navigate('/newcourse')}>
+        <p className="new-course" onClick={() => navigate('/newcourse')}>
           Can't find your course? Add one here!
         </p>
       </div>
