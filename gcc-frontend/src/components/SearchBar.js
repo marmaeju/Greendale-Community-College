@@ -1,36 +1,43 @@
 import { useState } from 'react'
 import Students from '../pages/Students'
+import axios from 'axios'
 
 const SearchBar = (props) => {
-  const [students, setStudents] = useState([])
-  const [query, setQuery] = useState('')
+  // const [students, setStudents] = useState([])
+  // const [query, setQuery] = useState('')
 
-  const searchStudent = students.filter((student) => {
-    return student.toLowerCase().includes(query.toLocaleLowerCase)
-  })
+  const [searchResults, setSearchResults] = useState([])
+  const [searched, toggleSearched] = useState(false)
+  const [searchQuery, setSearchQuery] = useState('')
 
-  // const onChange = (e) => {
-  //   const value = e.target.value
-  //   setStudents((prev) => {
-  //     console.log(students)
-  //     return prev.filter((student) =>
-  //       student.toLowerCase().includes(value.toLowerCase())
-  //     )
-  //   })
-  // }
+  // const searchStudent = students.filter((student) => {
+  //   return student.toLowerCase().includes(query.toLocaleLowerCase)
+  // })
+
+  const getSearchResults = async (e) => {
+    e.preventDefault()
+    const searches = await axios.get('http://localhost:3001/student')
+    setSearchResults(searches.data.results)
+    toggleSearched(true)
+    setSearchQuery('')
+  }
+
+  const handleChange = (event) => {
+    setSearchQuery(event.target.value)
+  }
 
   return (
     <div>
       Search:
       <input
         className="search"
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
+        value={searchQuery}
+        onChange={handleChange}
         type="search"
       />
       {/* <button>Submit</button> */}
       <h3>Students:</h3>
-      {searchStudent.map((student) => (
+      {searchResults.map((student) => (
         <div key={student.id} onClick={() => props.getAllStudents(student.id)}>
           <h2>{student.firstName}</h2>
           <h2>{student.lastName}</h2>
