@@ -34,3 +34,46 @@ justify-content: space-around;
   display: flex;
   align-items: center;
 }
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ font-size: 20px;
+  padding: 1em;
+  color: white;
+  min-height: 2em;
+  background-color: brown;
+}
+
+.navbar a {
+  text-decoration: none;
+  position: relative;
+  color: black;
+  padding-left: 40px;
+  margin-left: 0.5em;
+  margin-right: 1em;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  padding: 0 10px;
+}
+
+.linky::after {
+  position: absolute;
+  content: " ";
+  background-color: #e09f3e;
+  width: 75%;
+  height: 2px;
+  left: 9px;
+  bottom: -5px;
+
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 250ms ease-in;
+  /* left: 2px; */
+}
+
+.linky:hover::after {
+  transform: scaleX(1);
+}
