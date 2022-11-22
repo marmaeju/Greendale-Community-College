@@ -49,6 +49,11 @@ const Students = () => {
 
   return (
     <div className="students-container">
+
+      <h1>
+        <em>Browse Greendale Students</em>
+      </h1>
+   
       <Search getAllStudents={getAllStudents} />
  
       <h2><em>Enrolling a New Student? They're Already Accepted! Click below to Add:</em></h2>

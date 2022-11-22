@@ -119,12 +119,28 @@ a:hover,
 
 .home {
   font-family: 'Lora', serif;
+  text-align: center;
 }
 
 .home-image {
-  width: 50%;
-  padding-left: 25%;
+  width: 25%;
   object-position: center;
+  border-radius: 10%;
+  border: solid black;
+}
+
+.home-btn {
+  background-color: white;
+  padding: 0.5rem 1rem;
+  margin: 25px;
+  display: inline-block;
+  border: 2px solid black;
+  /* text-transform: uppercase; */
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: all 0.3s ease;
+  justify-content: space-evenly;
 }
 
 .add {
@@ -155,7 +171,7 @@ a:hover,
 }
 
 .btn:hover {
-  background-color: #90c0e6;
+
 }
 
 .home-buttons {
@@ -178,6 +194,24 @@ a:hover,
   margin: 10px
 
 }
+
+.course-details-main {
+  text-align: center;
+}
+
+.class-details-map {
+  text-align: left;
+  margin-left: 100px;
+}
+
+.student-names {
+  font-size: 20px;
+  text-decoration: underline;
+}
+
+.students-container {
+  text-align: center;
+  margin-top: 50px;
 
 .student-img {
   width: 200px;

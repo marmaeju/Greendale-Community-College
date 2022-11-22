@@ -21,13 +21,13 @@ const CourseDetails = () => {
   }, [])
 
   return (
-    <div className="main">
+    <div className="course-details-main">
       <h1 className="course-title">{className.courseName}</h1>
-      <h3>Roster:</h3>
       <div className="class-details-map">
+        <h2>Roster:</h2>
         {students.map((student) => (
           <div className="">
-            <p>
+            <p className="student-names">
               {student.lastName}, {student.firstName}
             </p>
             <p>
