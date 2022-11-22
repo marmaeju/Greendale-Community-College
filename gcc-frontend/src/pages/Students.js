@@ -7,11 +7,12 @@ const Students = () => {
   let navigate = useNavigate()
   const [studentList, setStudentList] = useState(null)
   const [selectedStudent, setSelectedStudent] = useState([])
+  const [gpa, setGpa] = useState([])
 
   const getAllStudents = async () => {
     const res = await axios.get('http://localhost:3001/student')
 
-    console.log(res.data)
+    // console.log(res.data)
     setStudentList(res.data)
   }
 
@@ -20,8 +21,26 @@ const Students = () => {
     navigate(`students/${selected.id}`)
   }
 
+  const getGPA = async () => {
+    let sum = 0
+    let average = null
+    let res = await axios.get(`http://localhost:3001/studentcourse/schedule/3`)
+    // console.log(res.data.schedule)
+    res.data.schedule.forEach((event) => {
+      if (event.Student_Course.grade != null) {
+        // console.log(event.Student_Course.grade)
+        sum += event.Student_Course.grade
+        average = sum / res.data.schedule.length
+      }
+    })
+    // console.log(sum)
+    console.log(average)
+    setGpa(average)
+  }
+
   useEffect(() => {
     getAllStudents()
+    getGPA()
   }, [])
 
   return (
