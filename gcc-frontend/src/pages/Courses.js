@@ -26,7 +26,10 @@ const Courses = () => {
       <div>
         <div className="courses">
           {courses.map((course) => (
-            <div key={course.id}>
+            <div
+              onClick={() => navigate(`/courses/${course.id}`)}
+              key={course.id}
+            >
               <h4 className="course-name">{course.courseName}</h4>
             </div>
           ))}
