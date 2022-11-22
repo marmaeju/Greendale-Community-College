@@ -30,7 +30,14 @@ const CourseDetails = () => {
             <p>
               {student.lastName}, {student.firstName}
             </p>
-            <p>Grade: {student.Student_Course.grade}</p>
+            <p>
+              Grade:
+              {student.Student_Course.grade === 4 && <p>A</p>}
+              {student.Student_Course.grade === 3 && <p>B</p>}
+              {student.Student_Course.grade === 2 && <p>C</p>}
+              {student.Student_Course.grade === 1 && <p>D</p>}
+              {student.Student_Course.grade === 0 && <p>F</p>}
+            </p>
           </div>
         ))}
       </div>
