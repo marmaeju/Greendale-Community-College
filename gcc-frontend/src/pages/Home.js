@@ -14,12 +14,13 @@ const Home = () => {
         Where Jeff Winger attends classes and the school gets destroyed once a
         year because of paintball wars.
       </h2>
-      <button className="btn" onClick={() => navigate('/students')}>
+      <button className="home-btn" onClick={() => navigate('/students')}>
         See Students
       </button>
-      <button className="btn" onClick={() => navigate('/courses')}>
+      <button className="home-btn" onClick={() => navigate('/courses')}>
         See Courses
       </button>
+
     </div>
   )
 }

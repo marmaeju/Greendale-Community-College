@@ -21,16 +21,23 @@ const CourseDetails = () => {
   }, [])
 
   return (
-    <div className="main">
+    <div className="course-details-main">
       <h1 className="course-title">{className.courseName}</h1>
-      <h3>Roster:</h3>
       <div className="class-details-map">
+        <h2>Roster:</h2>
         {students.map((student) => (
           <div className="">
-            <p>
+            <p className="student-names">
               {student.lastName}, {student.firstName}
             </p>
-            <p>Grade: {student.Student_Course.grade}</p>
+            <p>
+              Grade:
+              {student.Student_Course.grade === 4 && <span>A</span>}
+              {student.Student_Course.grade === 3 && <span>B</span>}
+              {student.Student_Course.grade === 2 && <span>C</span>}
+              {student.Student_Course.grade === 1 && <span>D</span>}
+              {student.Student_Course.grade === 0 && <span>F</span>}
+            </p>
           </div>
         ))}
       </div>
