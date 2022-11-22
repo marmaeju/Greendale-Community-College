@@ -24,6 +24,11 @@ const SearchBar = (props) => {
 
   const handleChange = (event) => {
     setSearchQuery(event.target.value)
+    console.log(searchQuery)
+  }
+
+  const getCourses = async () => {
+    let res = await axios.get('http://localhost:3001/course')
   }
 
   return (
@@ -36,7 +41,6 @@ const SearchBar = (props) => {
         type="search"
       />
       {/* <button>Submit</button> */}
-      <h3>Students:</h3>
       {searchResults.map((student) => (
         <div key={student.id} onClick={() => props.getAllStudents(student.id)}>
           <h2>{student.firstName}</h2>

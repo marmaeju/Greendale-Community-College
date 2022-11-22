@@ -34,9 +34,12 @@ const Courses = () => {
             </div>
           ))}
         </div>
-        <p className="add" onClick={() => navigate('/newcourse')}>
-          Can't find your course? Add one here!
-        </p>
+        <div className="add-container">
+          <p>Can't find your course?</p>
+          <button className="course-btn" onClick={() => navigate('/newcourse')}>
+            Add one here!
+          </button>
+        </div>
       </div>
     </div>
   )
