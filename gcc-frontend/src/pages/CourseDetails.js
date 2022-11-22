@@ -32,11 +32,11 @@ const CourseDetails = () => {
             </p>
             <p>
               Grade:
-              {student.Student_Course.grade === 4 && <p>A</p>}
-              {student.Student_Course.grade === 3 && <p>B</p>}
-              {student.Student_Course.grade === 2 && <p>C</p>}
-              {student.Student_Course.grade === 1 && <p>D</p>}
-              {student.Student_Course.grade === 0 && <p>F</p>}
+              {student.Student_Course.grade === 4 && <span>A</span>}
+              {student.Student_Course.grade === 3 && <span>B</span>}
+              {student.Student_Course.grade === 2 && <span>C</span>}
+              {student.Student_Course.grade === 1 && <span>D</span>}
+              {student.Student_Course.grade === 0 && <span>F</span>}
             </p>
           </div>
         ))}
