@@ -24,18 +24,17 @@ const Courses = () => {
 
       <SearchBar />
       <div>
-
-      <div className="courses">
-
-        {courses.map((course) => (
-          <div key={course.id}>
-            <h4 className="course-name">{course.courseName}</h4>
-          </div>
-        ))}
+        <div className="courses">
+          {courses.map((course) => (
+            <div key={course.id}>
+              <h4 className="course-name">{course.courseName}</h4>
+            </div>
+          ))}
+        </div>
+        <p onClick={() => navigate('/newcourse')}>
+          Can't find your course? Add one here!
+        </p>
       </div>
-      <p onClick={() => navigate('/newcourse')}>
-        Can't find your course? Add one here!
-      </p>
     </div>
   )
 }
